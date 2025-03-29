@@ -1,0 +1,149 @@
+1#
+n1 = float(input("Digite a primeira nota: "))
+n2 = float(input("Digite a segunda nota: "))
+n3 = float(input("Digite a terceira nota: "))
+
+media_simples = (n1 + n2 + n3) / 3
+media_ponderada_1 = (n1 * 2 + n2 * 2 + n3 * 3) / 7
+media_ponderada_2 = (n1 * 1 + n2 * 2 + n3 * 2) / 5
+
+print("Média Simples:", media_simples)
+print("Média Ponderada (2,2,3):", media_ponderada_1)
+print("Média Ponderada (1,2,2):", media_ponderada_2)
+
+
+2#
+segundos = int(input("Digite o tempo em segundos: "))
+
+dias = segundos // 86400
+horas = (segundos % 86400) // 3600
+minutos = (segundos % 3600) // 60
+
+print(dias, "dias,", horas, "horas e", minutos, "minutos")
+
+3#
+valor = float(input("Digite o valor total das mercadorias: "))
+
+if valor > 500:
+    imposto = (valor - 500) * 0.5
+else:
+    imposto = 0
+
+print("Imposto a pagar:", imposto)
+
+
+4#
+dias = int(input("Quantidade de dias alugados: "))
+km = float(input("Quilômetros rodados: "))
+
+custo = dias * 90 
+if km > 100:
+    custo += (km - 100) * 12
+
+print("Valor total a pagar:", custo)
+
+
+5#
+for i in range(100):
+    print(i, end=" ")
+
+
+6#
+cont = 0
+num = 2
+
+while cont < 100:
+    primo = True
+    for i in range(2, num):
+        if num % i == 0:
+            primo = False
+            break
+    if primo:
+        print(num, end=" ")
+        cont += 1
+    num += 1
+
+
+7#
+n = int(input("Digite um número ímpar: "))
+
+if n % 2 == 0:
+    print("O número deve ser ímpar.")
+else:
+    anterior = n - 2
+    proximo = n + 2
+    diferenca = (proximo ** 2) - (anterior ** 2)
+    print("Diferença entre quadrados:", diferenca)
+
+
+
+8#
+celsius = float(input("Digite a temperatura em Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print("Temperatura em Fahrenheit:", fahrenheit)
+
+
+9#
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+n3 = float(input("Digite o terceiro número: "))
+
+maior = max(n1, n2, n3)
+menor = min(n1, n2, n3)
+
+print("Maior número:", maior)
+print("Menor número:", menor)
+
+
+10#
+num = int(input("Digite um número maior que 1: "))
+
+primo = True
+for i in range(2, num):
+    if num % i == 0:
+        primo = False
+        break
+
+if primo:
+    print("É primo!")
+else:
+    print("Não é primo!")
+
+
+
+11#
+usuario = input("Digite o nome de usuário: ")
+senha = input("Digite a senha: ")
+
+while usuario == senha:
+    print("Erro! O nome de usuário e a senha não podem ser iguais.")
+    usuario = input("Digite o nome de usuário: ")
+    senha = input("Digite a senha: ")
+
+print("Cadastro realizado com sucesso!")
+
+
+
+12#
+turmas = int(input("Digite a quantidade de turmas: "))
+total_alunos = int(input("Digite a quantidade total de alunos: "))
+
+media = total_alunos / turmas
+
+if media > 40:
+    print("Alerta! Há turmas com mais de 40 alunos.")
+
+print("Média de alunos por turma:", media)
+
+
+
+13#
+salario = float(input("Digite o salário inicial: "))
+anos = int(input("Digite o número de anos: "))
+aumento = 1.05  # 5% no primeiro ano
+
+for _ in range(anos):
+    salario *= aumento
+    aumento *= 2  # O aumento dobra a cada ano
+
+print("Salário após", anos, "anos:", salario)
